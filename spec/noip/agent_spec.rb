@@ -8,6 +8,6 @@ describe Noip::Agent do
 
     subject(:user_agent) { Noip::Agent.new.user_agent }
 
-    it { is_expected.to eq "User-Agent: noip ruby gem/vDEAD.BEEF anthony.noip_gem@asellitt.com" }
+    it { is_expected.to eq "noip ruby gem/vDEAD.BEEF anthony.noip_gem@asellitt.com" }
   end
 end

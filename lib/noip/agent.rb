@@ -2,7 +2,7 @@ module Noip
   class Agent
 
     def user_agent
-      "User-Agent: #{update_program}/#{version_number} #{maintainer_email}"
+      "#{update_program}/#{version_number} #{maintainer_email}"
     end
 
   private
