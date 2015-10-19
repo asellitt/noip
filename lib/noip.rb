@@ -6,8 +6,8 @@ require 'noip/version'
 
 module Noip
 
-  def self.version
-    Noip::VERSION
+  def self.update
+    Noip::Updater.new.update
   end
 
 end
