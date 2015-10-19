@@ -3,6 +3,7 @@
 [![Gem Version](https://badge.fury.io/rb/noip.svg)](http://badge.fury.io/rb/noip)
 [![Build Status](https://travis-ci.org/asellitt/noip.svg?branch=master)](https://travis-ci.org/asellitt/noip)
 [![Code Climate](https://codeclimate.com/github/asellitt/noip/badges/gpa.svg)](https://codeclimate.com/github/asellitt/noip)
+[![Test Coverage](https://codeclimate.com/github/asellitt/noip/badges/coverage.svg)](https://codeclimate.com/github/asellitt/noip/coverage)
 
 A simple utility for updating [noip](https://www.noip.com/integrate/request)
 dynamic DNS records for when your router kinda shit.
