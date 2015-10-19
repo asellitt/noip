@@ -1,6 +1,7 @@
 require 'noip/version'
 require 'noip/credentials'
 require 'noip/agent'
+require 'noip/remote_ip'
 
 module Noip
 
