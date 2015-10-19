@@ -1,5 +1,8 @@
 # noip
 
+[![Gem Version](https://badge.fury.io/rb/noip.svg)](http://badge.fury.io/rb/noip)
+[![Build Status](https://travis-ci.org/asellitt/noip.svg?branch=master)](https://travis-ci.org/asellitt/noip)
+
 A simple utility for updating [noip](https://www.noip.com/integrate/request)
 dynamic DNS records for when your router kinda shit.
 
