@@ -6,6 +6,7 @@ require "noip/version"
 Gem::Specification.new do |spec|
   spec.name          = "noip"
   spec.version       = Noip::VERSION
+  spec.executables   = ["noip"]
   spec.authors       = ["Anthony Sellitti"]
   spec.email         = ["anthony.noip_gem@asellitt.com"]
   spec.summary       = "Dynamic DNS updater for No-IP"

@@ -5,10 +5,20 @@ dynamic DNS records for when your router kinda shit.
 
 ## Usage
 
+### Command Line Interface 
+
 You will need to provide your credentials and host to update as environment variables:
 
+```bash
+NOIP_HOST=host.to.update NOIP_USERNAME=username NOIP_PASSWORD=h4h-t0tez-l3g1t noip
 ```
-NOIP_HOST=host.to.update NOIP_USERNAME=username NOIP_PASSWORD=h4h-t0tez-l3g1t bundle exec rake noip:update
+
+### Crontab
+
+As before, environment variables will need to be provided, here's a sample crontab that will run every 4 hours:
+
+```crontab
+0 0,4,8,12,16,20 * * * NOIP_HOST=host.to.update NOIP_USERNAME=username NOIP_PASSWORD=h4h-t0tez-l3g1t noip
 ```
 
 ## Contributing
