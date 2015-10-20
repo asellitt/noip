@@ -3,7 +3,8 @@ require 'net/http'
 module Noip
   class Updater
 
-    def initialize
+    def initialize(credentials)
+      @credentials = credentials
       initialize_http_request
     end
 
@@ -13,7 +14,7 @@ module Noip
 
   private
 
-    attr_reader :http, :request, :response
+    attr_reader :credentials, :http, :request, :response
 
     def initialize_http_request
       @http = Net::HTTP.new('dynupdate.no-ip.com')
@@ -34,10 +35,6 @@ module Noip
 
     def remote_ip
       @remote_ip ||= Noip::RemoteIp.new
-    end
-
-    def credentials
-      @credentials ||= Noip::Credentials.new
     end
 
   end

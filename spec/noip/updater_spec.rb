@@ -16,15 +16,6 @@ describe Noip::Updater do
     end
     before { allow(Noip::RemoteIp).to receive(:new).and_return(remote_ip) }
 
-    let(:credentials) do
-      instance_double(Noip::Credentials,
-        :username => 'username',
-        :password => 'password',
-        :host => 'host',
-      )
-    end
-    before { allow(Noip::Credentials).to receive(:new).and_return(credentials) }
-
     let(:http) { instance_double(Net::HTTP) }
     before do
       allow(http).to receive(:request)
@@ -37,7 +28,15 @@ describe Noip::Updater do
       allow(Net::HTTP::Get).to receive(:new).and_return(request)
     end
 
-    subject(:update) { Noip::Updater.new.update }
+    let(:credentials) do
+      instance_double(Noip::Credentials,
+        :username => 'username',
+        :password => 'password',
+        :host => 'host',
+      )
+    end
+
+    subject(:update) { Noip::Updater.new(credentials).update }
     before { update }
 
     it 'requests the correct domain' do

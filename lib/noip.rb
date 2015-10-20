@@ -7,7 +7,10 @@ require 'noip/version'
 module Noip
 
   def self.update
-    Noip::Updater.new.update
+    credentials = Noip::Credentials.new
+    updater = Noip::Updater.new(credentials)
+
+    updater.update
   end
 
 end
