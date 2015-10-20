@@ -6,8 +6,8 @@ require 'noip/version'
 
 module Noip
 
-  def self.update
-    credentials = Noip::Credentials.new
+  def self.update(username, password, host)
+    credentials = Noip::Credentials.new(username, password, host)
     updater = Noip::Updater.new(credentials)
 
     updater.update

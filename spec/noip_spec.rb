@@ -11,8 +11,12 @@ describe Noip do
       allow(Noip::Updater).to receive(:new).and_return(updater)
     end
 
-    subject(:update) { Noip.update }
+    subject(:update) { Noip.update('username', 'password', 'host') }
     before { update }
+
+    it 'properly constructs the credentials' do
+      expect(Noip::Credentials).to have_received(:new).with('username', 'password', 'host')
+    end
 
     it 'provides the updater with the correct credentials' do
       expect(Noip::Updater).to have_received(:new).with(credentials)
