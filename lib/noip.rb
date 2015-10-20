@@ -1,4 +1,5 @@
 require 'noip/agent'
+require 'noip/cli'
 require 'noip/credentials'
 require 'noip/remote_ip'
 require 'noip/updater'

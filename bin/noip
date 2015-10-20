@@ -2,4 +2,4 @@
 
 require 'noip'
 
-Noip.update
+Noip::Update.start( ARGV )
