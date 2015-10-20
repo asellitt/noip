@@ -12,18 +12,20 @@ dynamic DNS records for when your router kinda shit.
 
 ### Command Line Interface 
 
-You will need to provide your credentials and host to update as environment variables:
+`noip` required three parameters: username, password, and host
 
 ```bash
-NOIP_HOST=host.to.update NOIP_USERNAME=username NOIP_PASSWORD=h4h-t0tez-l3g1t noip
+noip update -u username -p h4h-t0tez-l3g1t -h host.to.update
 ```
+
+See `noip help update` for more information
 
 ### Crontab
 
-As before, environment variables will need to be provided, here's a sample crontab that will run every 4 hours:
+Here's a sample crontab entry that will schedule the update every 4 hours
 
 ```crontab
-0 0,4,8,12,16,20 * * * NOIP_HOST=host.to.update NOIP_USERNAME=username NOIP_PASSWORD=h4h-t0tez-l3g1t noip
+0 0,4,8,12,16,20 * * * noip update -u username -p h4h-t0tez-l3g1t -h host.to.update
 ```
 
 ## Contributing
